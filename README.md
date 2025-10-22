@@ -40,12 +40,19 @@ We will test functions from gpio module.
 Create the folder and file Testing/test_gpio.c and include the following headers:
 
 #include <stdio.h>
+
 #include <stdbool.h>
+
 #include <stdint.h>
+
 #include <assert.h>
+
 #include "Gpio_Cfg.h"
+
 #include "Gpio.h"
+
 #include "ErrorHandler.h"
+
 
 ---
 
@@ -67,11 +74,15 @@ How it works:
 To run multiple tests conveniently, we will create Testing/main_test.c:
 
 #include <stdio.h>
+
 #include <assert.h>
+
 #include <stdbool.h>
+
 
 // ----------------------
 // Setting: enable/disable tests
+
 #define ENABLE_TESTS 1
 // ----------------------
 
@@ -97,14 +108,23 @@ void run_all_tests(void) {
 int main(void) {
 
 #if ENABLE_TESTS
+
     printf("=== RUNNING UNIT TESTS ===\n");
+    
     run_all_tests();
+    
     printf("=== ALL TESTS PASSED ===\n");
+    
 #else
+
     printf("Tests are disabled. Proceed to application code.\n");
+    
     // Here you can run the application instead of tests
+    
     // e.g. App_Lights_TurnOnLed();
+    
 #endif
+
     return 0;
 }
 
