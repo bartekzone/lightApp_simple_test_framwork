@@ -54,8 +54,7 @@ We will create a simple test that verifies whether setting a valid LED works cor
 
     void test_gpio_set_valid_led(void) {
         bool result = gpio_set(GPIO_SIGNAL_LED);
-        assert(result == true);
-}
+        assert(result == true);}
 
 How it works:
 - gpio_set(GPIO_SIGNAL_LED) calls the function that sets the LED pin.
@@ -96,6 +95,7 @@ void run_all_tests(void) {
 }
 
 int main(void) {
+
 #if ENABLE_TESTS
     printf("=== RUNNING UNIT TESTS ===\n");
     run_all_tests();
@@ -114,18 +114,23 @@ int main(void) {
 We will now be able to build either the application or the tests. The make file was updated with:
 
 -TARGET_APP - name of the main application executable
+
 -TARGET_TEST_MANUAL - name of the manual test executable
 
 Now you can build and run either:
 
 Application:
+
     make app
 And run it by:
+
     ./app_main
 
 Tests:
+
     make test_manual
 And run test by:
+
     ./app_test_manual
 
 Test results are printed in MSYS2 MINGW terminal.
