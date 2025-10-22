@@ -14,6 +14,7 @@
 ## 1. Download the Application Code
 Clone or download the repository containing the Lights application code.
 git clone https://github.com/bartekzone/lightApp.git
+
 cd lights-app
 
 The project implements a layered embedded application inspired by the AUTOSAR architecture.  
