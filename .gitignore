@@ -1,0 +1,14 @@
+# Ignoruj pliki wynikowe
+*.o
+*.exe
+*.out
+app_main
+app_test*
+*.tmp
+
+# Ignoruj katalogi tymczasowe
+/tmp
+*.log
+
+# Ignoruj pliki VSCode (opcjonalnie)
+.vscode/
