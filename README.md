@@ -81,25 +81,31 @@ To run multiple tests conveniently, we will create Testing/main_test.c:
 
 
 // ----------------------
+
 // Setting: enable/disable tests
 
 #define ENABLE_TESTS 1
+
 // ----------------------
 
 // Macro to run a test and print the result
+
 #define RUN_TEST(test_fn) \
     do { \
         printf("[RUNNING] %s...\n", #test_fn); \
         test_fn(); \
         printf("[PASSED ] %s\n", #test_fn); \
     } while (0)
+    
 // ----------------------
 
 // Declarations of test functions
+
 void test_gpio_set_valid_led(void);
 
 // Entry point for tests
 void run_all_tests(void) {
+
     RUN_TEST(test_gpio_set_valid_led);
 
     // Add more tests here
