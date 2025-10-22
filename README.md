@@ -38,6 +38,7 @@ Inside the project root, create a new folder for tests:
 ## 3. Create test_gpio.c
 We will test functions from gpio module. 
 Create the folder and file Testing/test_gpio.c and include the following headers:
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdint.h>
@@ -50,10 +51,12 @@ Create the folder and file Testing/test_gpio.c and include the following headers
 
 ## 4. Write the First Test
 We will create a simple test that verifies whether setting a valid LED works correctly.
+
     void test_gpio_set_valid_led(void) {
         bool result = gpio_set(GPIO_SIGNAL_LED);
         assert(result == true);
 }
+
 How it works:
 - gpio_set(GPIO_SIGNAL_LED) calls the function that sets the LED pin.
 - It returns a bool indicating success or failure.
@@ -63,6 +66,7 @@ How it works:
 
 ## 5. Create a Test Management File: main_test.c
 To run multiple tests conveniently, we will create Testing/main_test.c:
+
 #include <stdio.h>
 #include <assert.h>
 #include <stdbool.h>
@@ -108,6 +112,7 @@ int main(void) {
 
 ## 6. Update the Makefile
 We will now be able to build either the application or the tests. The make file was updated with:
+
 -TARGET_APP - name of the main application executable
 -TARGET_TEST_MANUAL - name of the manual test executable
 
